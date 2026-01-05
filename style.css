@@ -43,13 +43,7 @@ body {
   line-height: 1.6;
   margin-bottom: 28px;
 }
-.circle-card img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #f2c27b;
-}
+
 
 
 h1, h2 {
@@ -110,6 +104,7 @@ h1, h2 {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
+  border: 6px solid #f2c27b;
   transition: transform .4s;
 }
 
@@ -125,8 +120,12 @@ h1, h2 {
 
 .step img {
   width: 100%;
-  border-radius: 20px;
+  max-width: 220px;
+  border-radius: 18px;
+  margin: 14px auto;
+  display: block;
 }
+
 
 .number {
   background: #b35a3a;
