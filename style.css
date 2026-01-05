@@ -1,15 +1,20 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  color: #3a2418;
   background:
+    radial-gradient(circle at top,
+      rgba(255,255,255,0.65),
+      rgba(255,246,229,0.95)
+    ),
     linear-gradient(
       to bottom,
       #f7e3c6 0%,
-      #fff6e5 40%,
+      #fff6e5 45%,
       #f2d4a6 100%
     );
-  color: #3a2418;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .site-header {
@@ -66,15 +71,35 @@ h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 /* HERO SECTION FIX */
+ 
 .hero {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1.2fr 1fr; /* image wider */
   align-items: center;
-  padding: 90px 120px;
-  gap: 70px;
+  gap: 80px;
+  padding: 100px 120px;
   position: relative;
+  z-index: 1;
 }
 
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.hero-img {
+  width: 100%;
+}
 
 
 /* FADE INTO BACKGROUND (KEY PART) */
@@ -92,9 +117,11 @@ h1, h2 {
   );
 }
 
+ 
+
 .hero-img img {
   width: 100%;
-  max-width: 360px;     /* 🔑 controls image size */
+  max-width: none;    
   height: auto;
   border-radius: 24px;
   display: block;
@@ -184,30 +211,25 @@ h1, h2 {
 
 /* WOMEN SECTION FIX */
 
-
 .women-only {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 80px;
+  grid-template-columns: 1.2fr 1fr; /* image wider */
+  gap: 90px;
   padding: 120px 140px;
-  background:
-    linear-gradient(
-      to top,
-      #f2c27b 0%,
-      #f7e3c6 100%
-    );
   align-items: center;
   position: relative;
+  z-index: 1;
+  background: transparent;
 }
 
 .women-only img {
   width: 100%;
-  max-width: 360px;
-  border-radius: 30px;
-  position: relative;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  max-width: none; /* 🔑 */
+  border-radius: 32px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.2);
 }
 
+ 
 /* FADE BOTTOM */
 .women-only::after {
   content: "";
@@ -256,30 +278,34 @@ footer {
   }
 }
 
+ .ornament-bg {
+  position: fixed;
+  inset: 0;
+  background-image: url("images/ornament.png");
+  background-repeat: repeat;
+  background-size: 420px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+.section,
+.hero,
+.women-only {
+  position: relative;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,246,229,0),
+    rgba(255,246,229,1)
+  );
+}
+
  
-@media (max-width: 768px) {
-  .women-only {
-    grid-template-columns: 1fr;
-    padding: 60px 24px;
-    text-align: center;
-  }
-
-  .women-only img {
-    max-width: 260px;
-    margin: 0 auto 24px;
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 50px 24px;
-  }
-
-  .hero-img img {
-    max-width: 280px;
-    margin: 0 auto 24px;
-    display: block;
-  }
-}
