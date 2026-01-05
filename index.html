@@ -6,145 +6,167 @@
   <title>SisterClan | Women-Only Business Platform</title>
 
   <style>
+    :root {
+      --beige: #E3C07B;
+      --terracotta: #B35A3A;
+      --dark-brown: #3A2418;
+      --gold: #C9974D;
+      --cream: #FFF6E5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #fff7f2;
-      color: #2d2d2d;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--dark-brown);
       line-height: 1.6;
     }
 
     header {
-      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 18px 40px;
+      background: var(--cream);
       position: sticky;
       top: 0;
       z-index: 100;
+      border-bottom: 2px solid var(--beige);
     }
 
-    header h1 {
-      color: #8b4c39;
-      margin: 0;
-      font-size: 24px;
+    header img {
+      height: 55px;
     }
 
     header a {
-      text-decoration: none;
-      background: #8b4c39;
+      background: var(--terracotta);
       color: #fff;
-      padding: 10px 18px;
-      border-radius: 6px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
       font-weight: 500;
     }
 
     .hero {
-      padding: 80px 20px;
       text-align: center;
-      max-width: 900px;
-      margin: auto;
+      padding: 90px 20px;
+      background: radial-gradient(circle at center, var(--beige), var(--cream));
     }
 
-    .hero h2 {
-      font-size: 42px;
-      color: #3a1f15;
+    .hero h1 {
+      font-size: 44px;
       margin-bottom: 20px;
+      color: var(--dark-brown);
     }
 
     .hero p {
       font-size: 18px;
-      margin-bottom: 30px;
-      color: #555;
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 35px;
     }
 
     .hero .cta {
-      background: #8b4c39;
+      background: var(--terracotta);
       color: white;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 16px;
+      padding: 14px 30px;
+      border-radius: 30px;
       text-decoration: none;
+      font-size: 16px;
       margin: 0 10px;
       display: inline-block;
     }
 
     .section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
-    .section h3 {
+    .section h2 {
       text-align: center;
-      font-size: 30px;
-      margin-bottom: 40px;
-      color: #3a1f15;
+      font-size: 32px;
+      margin-bottom: 45px;
     }
 
-    .cards {
+    .circle-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
     }
 
-    .card {
+    .circle-card {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-radius: 50%;
+      height: 230px;
+      width: 230px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border: 6px solid var(--beige);
     }
 
-    .card h4 {
-      margin-bottom: 10px;
-      color: #8b4c39;
+    .circle-card h3 {
+      font-size: 16px;
+      color: var(--terracotta);
     }
 
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 25px;
       text-align: center;
     }
 
     .step {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 10px;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      border-left: 6px solid var(--terracotta);
     }
 
     .women-only {
-      background: #8b4c39;
+      background: var(--terracotta);
       color: white;
+      padding: 80px 20px;
       text-align: center;
-      padding: 60px 20px;
     }
 
-    .women-only h3 {
-      font-size: 32px;
-      margin-bottom: 15px;
+    .women-only h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
     }
 
     .women-only p {
       font-size: 18px;
-      max-width: 700px;
+      max-width: 800px;
       margin: auto;
     }
 
     footer {
-      background: #3a1f15;
-      color: #fff;
-      padding: 25px;
+      background: var(--dark-brown);
+      color: var(--cream);
       text-align: center;
+      padding: 25px;
       font-size: 14px;
     }
 
     @media (max-width: 600px) {
-      .hero h2 {
+      .hero h1 {
         font-size: 32px;
+      }
+
+      .circle-card {
+        height: 200px;
+        width: 200px;
       }
     }
   </style>
@@ -153,67 +175,57 @@
 <body>
 
 <header>
-  <h1>SisterClan</h1>
+  <!-- Replace src with your actual logo path -->
+  <img src="logo.jpg" alt="SisterClan Logo">
   <a href="#apply">Apply Now</a>
 </header>
 
 <section class="hero">
-  <h2>Build, Launch & Grow Your Business</h2>
+  <h1>Built by Women. Built for Women.</h1>
   <p>
-    SisterClan is a women-only, multi-level business platform that helps women
-    turn skills into sustainable businesses across food, beauty, tailoring,
-    wellness, and handmade products.
+    SisterClan is a women-only, multi-level business platform that empowers women
+    to start, grow, and scale businesses across food, beauty, tailoring, wellness,
+    and handmade products.
   </p>
   <a href="#apply" class="cta">Start Your Business</a>
-  <a href="#how" class="cta" style="background:#3a1f15;">How It Works</a>
+  <a href="#how" class="cta" style="background:var(--dark-brown);">How It Works</a>
 </section>
 
 <section class="section">
-  <h3>What You Can Build with SisterClan</h3>
-  <div class="cards">
-    <div class="card">
-      <h4>🍽 Cloud Kitchen</h4>
-      <p>Start a home-based food business with guidance and branding support.</p>
-    </div>
-    <div class="card">
-      <h4>💄 Beauty & Makeup</h4>
-      <p>Launch your beauty services with trust and visibility.</p>
-    </div>
-    <div class="card">
-      <h4>🧵 Tailoring & Boutique</h4>
-      <p>Turn your stitching skills into a real business.</p>
-    </div>
-    <div class="card">
-      <h4>🎨 Handmade Products</h4>
-      <p>Sell crafts, candles, snacks, and handmade goods.</p>
-    </div>
+  <h2>What You Can Build with SisterClan</h2>
+  <div class="circle-cards">
+    <div class="circle-card"><h3>🍽 Cloud Kitchens</h3></div>
+    <div class="circle-card"><h3>💄 Beauty & Makeup</h3></div>
+    <div class="circle-card"><h3>🧵 Tailoring & Boutique</h3></div>
+    <div class="circle-card"><h3>🧘 Wellness Services</h3></div>
+    <div class="circle-card"><h3>🎨 Handmade Products</h3></div>
   </div>
 </section>
 
 <section class="section" id="how">
-  <h3>How SisterClan Works</h3>
+  <h2>How SisterClan Works</h2>
   <div class="steps">
-    <div class="step">Register on the platform</div>
-    <div class="step">Submit your business idea</div>
-    <div class="step">Get approved & trained</div>
-    <div class="step">Launch & grow your business</div>
+    <div class="step">Register on SisterClan</div>
+    <div class="step">Submit Your Business Idea</div>
+    <div class="step">Get Approved & Trained</div>
+    <div class="step">Launch & Grow</div>
   </div>
 </section>
 
 <section class="women-only">
-  <h3>Built Only for Women</h3>
+  <h2>Women-Only by Design</h2>
   <p>
-    SisterClan is exclusively for women. Our mission is to empower women
-    financially through safe, trusted, and scalable business opportunities.
-    Men are not eligible to register as partners or franchise holders.
+    SisterClan is exclusively for women. Our mission is to create a safe,
+    empowering ecosystem where women can build independent, sustainable
+    businesses together.
   </p>
 </section>
 
 <section class="section" id="apply">
-  <h3>Ready to Start?</h3>
-  <p style="text-align:center; max-width:600px; margin:auto;">
-    Join SisterClan and take the first step towards building your own business
-    under a supportive, women-led ecosystem.
+  <h2>Ready to Begin Your Journey?</h2>
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    Join SisterClan and become part of a growing sisterhood of women entrepreneurs
+    across India.
   </p>
   <div style="text-align:center; margin-top:30px;">
     <a href="#" class="cta">Apply to SisterClan</a>
