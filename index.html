@@ -4,231 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SisterClan | Women-Only Business Platform</title>
-
-  <style>
-    :root {
-      --beige: #E3C07B;
-      --terracotta: #B35A3A;
-      --dark-brown: #3A2418;
-      --gold: #C9974D;
-      --cream: #FFF6E5;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Poppins", "Segoe UI", sans-serif;
-      background: var(--cream);
-      color: var(--dark-brown);
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 40px;
-      background: var(--cream);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 2px solid var(--beige);
-    }
-
-    header img {
-      height: 55px;
-    }
-
-    header a {
-      background: var(--terracotta);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 90px 20px;
-      background: radial-gradient(circle at center, var(--beige), var(--cream));
-    }
-
-    .hero h1 {
-      font-size: 44px;
-      margin-bottom: 20px;
-      color: var(--dark-brown);
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-      margin-bottom: 35px;
-    }
-
-    .hero .cta {
-      background: var(--terracotta);
-      color: white;
-      padding: 14px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 16px;
-      margin: 0 10px;
-      display: inline-block;
-    }
-
-    .section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 45px;
-    }
-
-    .circle-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 25px;
-    }
-
-    .circle-card {
-      background: white;
-      border-radius: 50%;
-      height: 230px;
-      width: 230px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      border: 6px solid var(--beige);
-    }
-
-    .circle-card h3 {
-      font-size: 16px;
-      color: var(--terracotta);
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
-      text-align: center;
-    }
-
-    .step {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      border-left: 6px solid var(--terracotta);
-    }
-
-    .women-only {
-      background: var(--terracotta);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .women-only h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
-
-    .women-only p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    footer {
-      background: var(--dark-brown);
-      color: var(--cream);
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .circle-card {
-        height: 200px;
-        width: 200px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-  <!-- Replace src with your actual logo path -->
-  <img src="logo.jpg" alt="SisterClan Logo">
-  <a href="#apply">Apply Now</a>
-</header>
-
-<section class="hero">
-  <h1>Built by Women. Built for Women.</h1>
-  <p>
-    SisterClan is a women-only, multi-level business platform that empowers women
-    to start, grow, and scale businesses across food, beauty, tailoring, wellness,
-    and handmade products.
-  </p>
-  <a href="#apply" class="cta">Start Your Business</a>
-  <a href="#how" class="cta" style="background:var(--dark-brown);">How It Works</a>
+<!-- HERO -->
+<section class="hero reveal">
+  <div class="hero-img">
+    <img src="images/hero.jpg" alt="SisterClan women cooking">
+  </div>
+  <div class="hero-text">
+    <h1>SisterClan</h1>
+    <p>
+      SisterClan is a women-only, multi-level business platform that empowers
+      women to start, grow, and scale businesses from home across food, beauty,
+      tailoring, wellness, and handmade products.
+    </p>
+    <div class="buttons">
+      <a href="#apply" class="btn primary">Start Your Business</a>
+      <a href="#how" class="btn secondary">How It Works</a>
+    </div>
+  </div>
 </section>
 
-<section class="section">
+<!-- CATEGORIES -->
+<section class="section reveal">
   <h2>What You Can Build with SisterClan</h2>
-  <div class="circle-cards">
-    <div class="circle-card"><h3>🍽 Cloud Kitchens</h3></div>
-    <div class="circle-card"><h3>💄 Beauty & Makeup</h3></div>
-    <div class="circle-card"><h3>🧵 Tailoring & Boutique</h3></div>
-    <div class="circle-card"><h3>🧘 Wellness Services</h3></div>
-    <div class="circle-card"><h3>🎨 Handmade Products</h3></div>
+  <p class="subtext">Discover home-based business categories you can start and grow</p>
+
+  <div class="circle-grid">
+    <div class="circle-card">
+      <img src="images/cloud-kitchen.jpg">
+      <span>Cloud Kitchens</span>
+    </div>
+    <div class="circle-card">
+      <img src="images/beauty.jpg">
+      <span>Beauty & Makeup</span>
+    </div>
+    <div class="circle-card">
+      <img src="images/tailoring.jpg">
+      <span>Tailoring & Boutique</span>
+    </div>
+    <div class="circle-card">
+      <img src="images/wellness.jpg">
+      <span>Wellness Services</span>
+    </div>
   </div>
 </section>
 
-<section class="section" id="how">
+<!-- HOW IT WORKS -->
+<section class="section reveal" id="how">
   <h2>How SisterClan Works</h2>
+
   <div class="steps">
-    <div class="step">Register on SisterClan</div>
-    <div class="step">Submit Your Business Idea</div>
-    <div class="step">Get Approved & Trained</div>
-    <div class="step">Launch & Grow</div>
+    <div class="step">
+      <div class="number">1</div>
+      <img src="images/step1.jpg">
+      <p>Register on the Platform</p>
+    </div>
+    <div class="step">
+      <div class="number">2</div>
+      <img src="images/step2.jpg">
+      <p>Submit Your Business Idea</p>
+    </div>
+    <div class="step">
+      <div class="number">3</div>
+      <img src="images/step3.jpg">
+      <p>Get Approved & Trained</p>
+    </div>
+    <div class="step">
+      <div class="number">4</div>
+      <img src="images/step4.jpg">
+      <p>Launch & Grow Your Business</p>
+    </div>
   </div>
 </section>
 
-<section class="women-only">
-  <h2>Women-Only by Design</h2>
-  <p>
-    SisterClan is exclusively for women. Our mission is to create a safe,
-    empowering ecosystem where women can build independent, sustainable
-    businesses together.
-  </p>
-</section>
-
-<section class="section" id="apply">
-  <h2>Ready to Begin Your Journey?</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Join SisterClan and become part of a growing sisterhood of women entrepreneurs
-    across India.
-  </p>
-  <div style="text-align:center; margin-top:30px;">
-    <a href="#" class="cta">Apply to SisterClan</a>
+<!-- WOMEN ONLY -->
+<section class="women-only reveal" id="apply">
+  <img src="images/women.jpg">
+  <div>
+    <h2>Built Exclusively for Women</h2>
+    <p>
+      SisterClan is exclusively for women. Our mission is to create a safe,
+      trusted, and empowering ecosystem where women can build independent
+      businesses together.
+    </p>
+    <a class="btn primary">Apply to SisterClan</a>
   </div>
 </section>
 
@@ -236,5 +98,6 @@
   © 2026 SisterClan | Women-Only Business Platform
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
