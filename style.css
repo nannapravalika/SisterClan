@@ -75,11 +75,6 @@ h1, h2 {
   position: relative;
 }
 
-/* IMAGE CONTAINER */
-.hero-img {
-  position: relative;
-  max-width: 420px;
-}
 
 
 /* FADE INTO BACKGROUND (KEY PART) */
