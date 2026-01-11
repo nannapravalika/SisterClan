@@ -106,7 +106,7 @@ h1, h2 {
 .hero-img img {
   width: 100%;
   max-width: none;    
-  height: auto;
+  height: 50%;
   border-radius: 24px;
   display: block;
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
